@@ -1,0 +1,32 @@
+﻿<Window x:Class="SalesWPFApp.WindowProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalesWPFApp"
+        mc:Ignorable="d"
+        Title="WindowProduct" Height="450" Width="800">
+    <Grid>
+        <Label Content="Window Member" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <DataGrid Loaded="LoadData_Grid" x:Name="data" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="289,52,0,0" SelectionChanged="data_SelectionChanged"/>
+        <TextBox IsEnabled="False" x:Name="productidInput" HorizontalAlignment="Left" Margin="10,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="Product Id *" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,97,0,0" TextWrapping="Wrap" Text="Category *" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,141,0,0" TextWrapping="Wrap" Text="Product Name *" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,194,0,0" TextWrapping="Wrap" Text="Weight *" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,245,0,0" TextWrapping="Wrap" Text="Unit Price *" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
+        <TextBox x:Name="UISInput" HorizontalAlignment="Left" Margin="10,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,294,0,0" TextWrapping="Wrap" Text="Units In Stock" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
+        <Button x:Name="addBtn" Content="Add" HorizontalAlignment="Left" Margin="10,348,0,0" VerticalAlignment="Top" Height="30" Width="55" Click="Button_Click"/>
+        <Button x:Name="updateBtn" IsEnabled="False" Content="Update" HorizontalAlignment="Left" Margin="82,348,0,0" VerticalAlignment="Top" Height="30" Width="55" Click="Button_Click_2"/>
+        <Button x:Name="deleteBtn" IsEnabled="False" Content="Delete" HorizontalAlignment="Left" Margin="156,348,0,0" VerticalAlignment="Top" Height="30" Width="55" RenderTransformOrigin="0.782,0.468" Click="Button_Click_1"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="229,348,0,0" VerticalAlignment="Top" Height="30" Width="55" Click="Button_Click_3"/>
+        <Button Content="Order View" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Height="29" Width="85" Click="Button_Click_4"/>
+        <Button Content="Member View" HorizontalAlignment="Left" Margin="104,9,0,0" VerticalAlignment="Top" Height="29" Width="86" Click="Button_Click_5"/>
+        <TextBox x:Name="cateInput" HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
+        <TextBox x:Name="pNameInput" HorizontalAlignment="Left" Margin="10,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
+        <TextBox x:Name="weightInput" HorizontalAlignment="Left" Margin="10,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
+        <TextBox x:Name="unitPriceInput" HorizontalAlignment="Left" Margin="10,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
+
+    </Grid>
+</Window>
