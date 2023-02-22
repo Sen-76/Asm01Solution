@@ -17,9 +17,6 @@ namespace DataAccess.Repository
 
         public void Update(Product product) => ProductManagerment.Instance.Update(product);
 
-        public List<Product> Search(string name)
-        {
-            throw new NotImplementedException();
-        }
+        public List<Product> Filter(string? name, decimal? unitPrice, int? stock) => ProductManagerment.Instance.Filter(name, unitPrice, stock);
     }
 }

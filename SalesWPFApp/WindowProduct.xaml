@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="WindowProduct" Height="450" Width="800">
     <Grid>
-        <Label Content="Window Member" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Label Content="Window Member" HorizontalAlignment="Left" Margin="229,6,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
         <DataGrid Loaded="LoadData_Grid" x:Name="data" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="289,52,0,0" SelectionChanged="data_SelectionChanged"/>
         <TextBox IsEnabled="False" x:Name="productidInput" HorizontalAlignment="Left" Margin="10,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="Product Id *" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
@@ -27,6 +27,13 @@
         <TextBox x:Name="pNameInput" HorizontalAlignment="Left" Margin="10,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
         <TextBox x:Name="weightInput" HorizontalAlignment="Left" Margin="10,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
         <TextBox x:Name="unitPriceInput" HorizontalAlignment="Left" Margin="10,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
+        <Label Content="Filter" HorizontalAlignment="Left" Margin="447,14,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="filterName" HorizontalAlignment="Left" Margin="506,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="filterPrice" HorizontalAlignment="Left" Margin="606,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="filterStock" HorizontalAlignment="Left" Margin="705,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Product Name" HorizontalAlignment="Left" Margin="506,6,0,0" VerticalAlignment="Top"/>
+        <Label Content="Unit Price" HorizontalAlignment="Left" Margin="606,5,0,0" VerticalAlignment="Top"/>
+        <Label Content="Unit in Stock" HorizontalAlignment="Left" Margin="705,6,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -162,7 +162,7 @@ namespace SalesWPFApp
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
             try
-            {   
+            {
                 this.Hide();
                 WindowMember windowOrder = new WindowMember(_memberService, _orderService, _productService, _orderDetailService);
                 windowOrder.Show();
@@ -170,6 +170,23 @@ namespace SalesWPFApp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Action failed", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                string name = filterName.Text;
+                Decimal price;
+                Decimal.TryParse(filterPrice.Text, out price);
+                int stock;
+                int.TryParse(filterStock.Text, out stock);
+                data.ItemsSource = _productService.Filter(name, price, stock);
+            }
+            catch
+            {
+                throw;
             }
         }
     }

@@ -27,6 +27,5 @@
         <DatePicker x:Name="shippedDateInput" HorizontalAlignment="Left" Margin="10,266,0,0" VerticalAlignment="Top" Width="274"/>
         <DatePicker x:Name="orderDateInput" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Width="274"/>
         <ComboBox x:Name="memberCbBox" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="274"/>
-
     </Grid>
 </Window>

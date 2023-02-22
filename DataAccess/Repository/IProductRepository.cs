@@ -12,7 +12,7 @@ namespace DataAccess.Repository
         public void Add(Product product);
         public void Update(Product product);
         public void Delete(string id);
-        public List<Product> Search(string name);
+        public List<Product> Filter(string? name, decimal? unitPrice, int? stock);
         public List<Product> AllProduct();
     }
 }

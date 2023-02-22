@@ -27,7 +27,8 @@
         <Button Content="Reset" HorizontalAlignment="Left" Margin="229,331,0,0" VerticalAlignment="Top" Height="30" Width="55" Click="Reset_Click"/>
         <Button Content="Order View" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Height="29" Width="85" Click="Button_Click_2"/>
         <Button Content="Product View" HorizontalAlignment="Left" Margin="104,9,0,0" VerticalAlignment="Top" Height="29" Width="86" Click="Button_Click_3"/>
-        <TextBox x:Name="searchinput" HorizontalAlignment="Left" Margin="409,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="343" Height="23" TextChanged="searchinput_TextChanged"/>
+        <TextBox x:Name="searchinput" HorizontalAlignment="Left" Margin="544,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="23" TextChanged="searchinput_TextChanged"/>
+        <Label Content="Search by Email" HorizontalAlignment="Left" Margin="414,12,0,0" VerticalAlignment="Top" Width="125"/>
 
     </Grid>
 </Window>

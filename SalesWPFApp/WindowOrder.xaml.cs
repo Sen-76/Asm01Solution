@@ -40,6 +40,14 @@ namespace SalesWPFApp
             memberCbBox.ItemsSource= _memberService.AllMember().Select(x => x.MemberId);
             //memberCbBox.ItemsSource= _memberRepository.AllMember().Select(x => x.Email);
             memberCbBox.SelectedIndex = 0;
+            var quantityColumn = new DataGridTextColumn
+            {
+                Header = "Quantity",
+                Binding = new Binding("Quantity")
+            };
+
+            // Add the new column to the DataGrid
+            data.Columns.Add(quantityColumn);
         }
 
         private void data_SelectionChanged(object sender, SelectionChangedEventArgs e)

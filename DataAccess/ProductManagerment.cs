@@ -37,6 +37,20 @@ namespace DataAccess
             }
             return Product;
         }
+        public List<Product> Filter(string? name, decimal? unitPrice, int? stock)
+        {
+            List<Product> Product;
+            try
+            {
+                var context = new SaleManagerWPFContext();
+                Product = context.Products.Where(x => x.ProductName.Contains(name) && x.UnitPrice >= unitPrice && x.UnitsInStock >= stock).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return Product;
+        }
         public void Add(Product Product)
         {
             try
