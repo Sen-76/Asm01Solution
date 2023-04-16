@@ -80,6 +80,7 @@ namespace SalesWPFApp
             {
                 Order em = new Order()
                 {
+                    OrderId= int.Parse(orderInput.Text.Trim()),
                     OrderDate = Convert.ToDateTime(orderDateInput.Text.Trim()),
                     RequiredDate = requiredDateInput.Text.Trim().Length > 0 ? Convert.ToDateTime(requiredDateInput.Text.Trim()) : null,
                     ShippedDate = shippedDateInput.Text.Trim().Length > 0 ? Convert.ToDateTime(shippedDateInput.Text.Trim()) : null,
@@ -104,6 +105,7 @@ namespace SalesWPFApp
                     _orderDetailService.DeleteOrder(emp.OrderId);
                     _orderService.Delete(emp.OrderId.ToString());
                 }
+                Button_Click_3(sender, e);
                 LoadData_Grid(sender, e);
             }
             catch (Exception ex)

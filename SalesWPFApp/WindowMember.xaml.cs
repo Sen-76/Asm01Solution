@@ -2,18 +2,8 @@
 using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Markup;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SalesWPFApp
 {
@@ -45,6 +35,7 @@ namespace SalesWPFApp
                     _memberService.Delete(emp.MemberId.ToString());
                 }
                 LoadData_Grid(sender, e);
+                Reset_Click(sender, e);
             }
             catch (Exception ex)
             {
@@ -107,6 +98,7 @@ namespace SalesWPFApp
             {
                 Member em = new Member()
                 {
+                    MemberId= int.Parse(memberIdInput.Text.Trim()),
                     Email= emailInput.Text.Trim(),
                     CompanyName= cNameInput.Text.Trim(),
                     City= cityInput.Text.Trim(),

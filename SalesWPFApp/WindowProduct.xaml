@@ -9,7 +9,7 @@
     <Grid>
         <Label Content="Window Member" HorizontalAlignment="Left" Margin="229,6,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
         <DataGrid Loaded="LoadData_Grid" x:Name="data" d:ItemsSource="{d:SampleData ItemCount=15}" Margin="289,52,0,0" SelectionChanged="data_SelectionChanged"/>
-        <TextBox IsEnabled="False" x:Name="productidInput" HorizontalAlignment="Left" Margin="10,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
+        <TextBox x:Name="productidInput" HorizontalAlignment="Left" Margin="10,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="Product Id *" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,97,0,0" TextWrapping="Wrap" Text="Category *" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,141,0,0" TextWrapping="Wrap" Text="Product Name *" VerticalAlignment="Top" RenderTransformOrigin="0.073,1.016" Width="274"/>
